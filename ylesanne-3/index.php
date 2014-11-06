@@ -22,7 +22,7 @@
       </div>
 
       <div class="form-field">
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" name="submit">
       </div>
     </form>
   </body>
