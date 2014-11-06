@@ -12,18 +12,16 @@
 
  $username = isset($_POST["username"]) ? ($_POST["username"]) : "Puudub";
 	$sex = isset($_POST["sex"]) ? ($_POST["sex"]) : "Puudub";
+	
   if ($username == $_POST["username"] && $sex == $_POST["sex"]) {echo "Tere {$username}!Tundub et olete {$sex}.";} ;
   if (isset($_POST["submit"])){
 			$username = $_POST['username'];
-			echo "Palun minge tagasi ja valige sugu.";};
-	if (isset($_POST["submit"])) { 
-		$sex = $_POST['sex']; 
-		echo "Palun minge tagasi ja sisestage nimi";};
-	if(!isset($_POST["username"], $_POST['sex'])) {
+			echo "Palun minge tagasi ja valige sugu.";}
+			else { 
+		echo "Palun minge tagasi ja sisestage nimi";}
+	if ($username !== $_POST["username"] && $sex !== $_POST["sex"]) {
 		echo "Palun minge tagasi ja täitke väljad.";
-	} else {
-		echo "Tundub, et sattusid siia otseteed pidi.";
-	}
+	} 
 ?>
     <div><a href="index.php">Mine tagasi</a></div>
   </body>
